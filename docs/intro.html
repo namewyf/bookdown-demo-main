@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Introduction | A Minimal Book Example</title>
+  <title>Chapter 2 拓扑学 | A Minimal Book Example</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Introduction | A Minimal Book Example" />
+  <meta property="og:title" content="Chapter 2 拓扑学 | A Minimal Book Example" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Introduction | A Minimal Book Example" />
+  <meta name="twitter:title" content="Chapter 2 拓扑学 | A Minimal Book Example" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Yihui Xie" />
 
 
-<meta name="date" content="2025-01-09" />
+<meta name="date" content="2025-01-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -124,29 +124,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -165,7 +142,25 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> 拓扑学</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="01-intro.html"><a href="#%E5%A6%82%E4%BD%95%E5%88%A4%E5%AE%9A%E6%98%AF%E5%90%A6%E4%B8%BA%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4"><i class="fa fa-check"></i><b>2.1</b> 如何判定是否为度量空间？</a></li>
+<li class="chapter" data-level="2.2" data-path="01-intro.html"><a href="#%E6%AC%A7%E5%BC%8F%E5%BA%A6%E9%87%8F"><i class="fa fa-check"></i><b>2.2</b> 欧式度量</a></li>
+<li class="chapter" data-level="2.3" data-path="01-intro.html"><a href="#%E7%90%83%E5%BD%A2%E9%82%BB%E5%9F%9F"><i class="fa fa-check"></i><b>2.3</b> 球形邻域</a></li>
+<li class="chapter" data-level="2.4" data-path="01-intro.html"><a href="#%E5%BC%80%E9%9B%86"><i class="fa fa-check"></i><b>2.4</b> 开集</a></li>
+<li class="chapter" data-level="2.5" data-path="01-intro.html"><a href="#%E5%BC%80%E9%9B%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8"><i class="fa fa-check"></i><b>2.5</b> 开集的基本性质</a></li>
+<li class="chapter" data-level="2.6" data-path="01-intro.html"><a href="#%E6%8B%93%E6%89%91"><i class="fa fa-check"></i><b>2.6</b> 拓扑</a></li>
+<li class="chapter" data-level="2.7" data-path="01-intro.html"><a href="#%E9%97%AD%E5%8C%85%E7%A8%A0%E5%AF%86"><i class="fa fa-check"></i><b>2.7</b> 闭包=稠密</a></li>
+<li class="chapter" data-level="2.8" data-path="01-intro.html"><a href="#%E5%86%85%E9%83%A8%E8%BE%B9%E7%95%8C"><i class="fa fa-check"></i><b>2.8</b> 内部边界</a></li>
+<li class="chapter" data-level="2.9" data-path="01-intro.html"><a href="#%E6%8B%93%E6%89%91%E5%9F%BA%E5%AD%90%E5%9F%BA"><i class="fa fa-check"></i><b>2.9</b> 拓扑基、子基</a></li>
+<li class="chapter" data-level="2.10" data-path="01-intro.html"><a href="#%E4%B8%A4%E4%B8%AA%E4%BE%8B%E5%AD%90"><i class="fa fa-check"></i><b>2.10</b> 两个例子</a></li>
+<li class="chapter" data-level="2.11" data-path="01-intro.html"><a href="#%E5%AD%90%E7%A9%BA%E9%97%B4"><i class="fa fa-check"></i><b>2.11</b> 子空间</a></li>
+<li class="chapter" data-level="2.12" data-path="01-intro.html"><a href="#%E4%B9%98%E7%A7%AF%E7%A9%BA%E9%97%B4"><i class="fa fa-check"></i><b>2.12</b> 乘积空间</a></li>
+<li class="chapter" data-level="2.13" data-path="01-intro.html"><a href="#%E5%95%86%E7%A9%BA%E9%97%B4"><i class="fa fa-check"></i><b>2.13</b> 商空间</a></li>
+<li class="chapter" data-level="2.14" data-path="01-intro.html"><a href="#%E7%B4%A7%E6%80%A7"><i class="fa fa-check"></i><b>2.14</b> 紧性</a></li>
+<li class="chapter" data-level="2.15" data-path="01-intro.html"><a href="#%E8%BF%9E%E9%80%9A%E6%80%A7"><i class="fa fa-check"></i><b>2.15</b> 连通性</a></li>
+<li class="chapter" data-level="2.16" data-path="01-intro.html"><a href="#hausdaff%E6%80%A7%E8%B4%A8"><i class="fa fa-check"></i><b>2.16</b> hausdaff性质</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
 <li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a>
 <ul>
@@ -199,186 +194,107 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="intro" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Introduction<a href="intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="intro.html#intro">2</a>. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter <a href="methods.html#methods">4</a>.</p>
-<p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, .<span class="dv">1</span>, .<span class="dv">1</span>))</span>
-<span id="cb2-2"><a href="intro.html#cb2-2" tabindex="-1"></a><span class="fu">plot</span>(pressure, <span class="at">type =</span> <span class="st">&#39;b&#39;</span>, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:nice-fig"></span>
-<img src="bookdown-demo_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
-<p class="caption">
-Figure 2.1: Here is a nice figure!
-</p>
+<h1><span class="header-section-number">Chapter 2</span> 拓扑学<a href="intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="如何判定是否为度量空间" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> 如何判定是否为度量空间？<a href="#%E5%A6%82%E4%BD%95%E5%88%A4%E5%AE%9A%E6%98%AF%E5%90%A6%E4%B8%BA%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(X\)</span>是一个非空集合，<span class="math inline">\(\rho: X\times X\rightarrow \mathbb{R}\)</span>是一个函数.对于任意的<span class="math inline">\(x,y,z\in X\)</span>, 满足：</p>
+<p><span class="math display">\[
+\begin{aligned}
+1. &amp;\text{正定性，} \rho(x,y) \ge 0, \text{当} x = y \text{时}, \rho(x,y) = 0 \\
+2. &amp;\text{对称性，} \rho(x,y) = \rho(y,x) \\
+3. &amp;\text{三角不等式，} \rho(x,y) \le \rho(x,z) + \rho(y,z)
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\rho是X\)</span>上的一个度量，<strong>或者距离</strong>，这里用距离就很好理解了。<span class="math inline">\((X,\rho)或X\)</span>为一个度量空间</p>
 </div>
-<p>Reference a figure by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <a href="intro.html#fig:nice-fig">2.1</a>. Similarly, you can reference tables generated from <code>knitr::kable()</code>, e.g., see Table <a href="intro.html#tab:nice-tab">2.1</a>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="intro.html#cb3-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb3-2"><a href="intro.html#cb3-2" tabindex="-1"></a>  <span class="fu">head</span>(iris, <span class="dv">20</span>), <span class="at">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb3-3"><a href="intro.html#cb3-3" tabindex="-1"></a>  <span class="at">booktabs =</span> <span class="cn">TRUE</span></span>
-<span id="cb3-4"><a href="intro.html#cb3-4" tabindex="-1"></a>)</span></code></pre></div>
-<table>
-<caption><span id="tab:nice-tab">Table 2.1: </span>Here is a nice table!</caption>
-<thead>
-<tr class="header">
-<th align="right">Sepal.Length</th>
-<th align="right">Sepal.Width</th>
-<th align="right">Petal.Length</th>
-<th align="right">Petal.Width</th>
-<th align="left">Species</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.7</td>
-<td align="right">3.2</td>
-<td align="right">1.3</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.6</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.0</td>
-<td align="right">3.6</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.7</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.6</td>
-<td align="right">3.4</td>
-<td align="right">1.4</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.0</td>
-<td align="right">3.4</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.4</td>
-<td align="right">2.9</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.4</td>
-<td align="right">3.7</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.8</td>
-<td align="right">3.4</td>
-<td align="right">1.6</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.8</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.3</td>
-<td align="right">3.0</td>
-<td align="right">1.1</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.8</td>
-<td align="right">4.0</td>
-<td align="right">1.2</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.7</td>
-<td align="right">4.4</td>
-<td align="right">1.5</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.3</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.7</td>
-<td align="right">3.8</td>
-<td align="right">1.7</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.1</td>
-<td align="right">3.8</td>
-<td align="right">1.5</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-</tbody>
-</table>
-<p>You can write citations, too. For example, we are using the <strong>bookdown</strong> package <span class="citation">(<a href="#ref-R-bookdown">Xie 2025</a>)</span> in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(<a href="#ref-xie2015">Xie 2015</a>)</span>.</p>
+<div id="欧式度量" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> 欧式度量<a href="#%E6%AC%A7%E5%BC%8F%E5%BA%A6%E9%87%8F" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>如果我们把以上的度量空间从2维度推广到n维，那么就可以得到欧式空间</p>
+<p><span class="math display">\[
+\rho(x,y) = (\sum_{k=1}^{n}(x_k-y_k)^{\frac{1}{2}})
+\]</span></p>
+</div>
+<div id="球形邻域" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> 球形邻域<a href="#%E7%90%83%E5%BD%A2%E9%82%BB%E5%9F%9F" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="开集" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> 开集<a href="#%E5%BC%80%E9%9B%86" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>设<span class="math inline">\((X,\rho)\)</span>是一个度量空间，<span class="math inline">\(A\subset X\)</span>.<span class="math inline">\(\forall x\in A\)</span>，那么都存在一个<span class="math inline">\(x的球形邻域B(x,\epsilon)\)</span>，使得： <span class="math display">\[x\in B(x,\epsilon)\subset A\]</span> 成立，那么<span class="math inline">\(A\)</span>就是<span class="math inline">\((X,\rho)\)</span>的开集</p>
+<p>任意球形邻域都是开集</p>
+<p>度量空间里的一个集合是开集<span class="math inline">\(\Leftrightarrow\)</span>这个集合可以表示为若干球形邻域的并</p>
+</div>
+<div id="开集的基本性质" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> 开集的基本性质<a href="#%E5%BC%80%E9%9B%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>设<span class="math inline">\(\mathcal{T}\)</span>是<span class="math inline">\((X,\rho)\)</span>中所有的开集构成的集合，<span class="math inline">\(\mathcal{T}\)</span>满足如下性质：</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\emptyset,X\in \mathcal{T}\)</span></p></li>
+<li><p>有限多个<span class="math inline">\(\mathcal{T}\)</span>的交依然是<span class="math inline">\(\mathcal{T}\)</span>的成员</p></li>
+<li><p>任意多个<span class="math inline">\(\mathcal{T}\)</span>的并依然是<span class="math inline">\(\mathcal{T}\)</span>的成员</p></li>
+</ol>
+</div>
+<div id="拓扑" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> 拓扑<a href="#%E6%8B%93%E6%89%91" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(设X是一个非空集合，如果\mathcal{T}\subset 2^X\)</span>满足：</p>
+<p><span class="math display">\[1. \emptyset,X\in \mathcal{T}\\
+2.  有限多个\mathcal{T}交依然是\mathcal{T}的成员\\
+3.  任意多个\mathcal{T}的并依然是\mathcal{T}的成员\\
+那么\mathcal{T}是X上的拓扑，(X,\mathcal{T})是一个拓扑空间，\mathcal{T}中的成员都是(X,\mathcal{T})的开集
+\]</span></p>
+<p>平凡拓扑是最小的拓扑只包含<span class="math inline">\(\emptyset\)</span>和<span class="math inline">\(X\)</span>,离散拓扑是最大的拓扑，<span class="math inline">\(\mathcal{T}=2^X\)</span></p>
+</div>
+<div id="闭包稠密" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> 闭包=稠密<a href="#%E9%97%AD%E5%8C%85%E7%A8%A0%E5%AF%86" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>设<span class="math inline">\((X,\mathcal{T})是拓扑空间，x\in X,A\subset X，如果对于x的任意邻域U,都有\)</span></p>
+<p><span class="math inline">\(U\cap (A-{x})\neq \emptyset\)</span></p>
+<p>那么<span class="math inline">\(x是一个聚点，A所有聚点的集合叫做A的导集，记作A&#39;，那么A的闭包\overline{A}=A\cup A&#39;\)</span></p>
+</div>
+<div id="内部边界" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> 内部边界<a href="#%E5%86%85%E9%83%A8%E8%BE%B9%E7%95%8C" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(拓扑空间(X,\mathcal{T}),A\subset X,x\in A,如果A是邻域，那么x是内点，所有内点集合就是内部\)</span></p>
+<p><span class="math inline">\(拓扑空间(X,\mathcal{T}),A\subset X,x\in,如果对于任意x的邻域U，都有\)</span></p>
+<p><span class="math inline">\(U\cap A\neq \emptyset而且U\cap A^C\neq \emptyset\)</span></p>
+<p><span class="math inline">\(那么x就是A的边界点，边界点集合就是A的边界\)</span></p>
+</div>
+<div id="拓扑基子基" class="section level2 hasAnchor" number="2.9">
+<h2><span class="header-section-number">2.9</span> 拓扑基、子基<a href="#%E6%8B%93%E6%89%91%E5%9F%BA%E5%AD%90%E5%9F%BA" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(拓扑空间(X,\mathcal{T})，\mathcal{B} \subset \mathcal{T},如果空间里每个开集都能表示为\mathcal{B}里面若干成员的并，那么\mathcal{B}是\mathcal{T}的一个基（拓扑基）\)</span></p>
+<p><span class="math inline">\(拓扑空间(X,\mathcal{T})，\mathcal{S}\subset \mathcal{T},如果\mathcal{S}中元的有限交全体构成\mathcal{T}的拓扑基，那么\mathcal{S}是\mathcal{T}的拓扑子基\)</span></p>
+</div>
+<div id="两个例子" class="section level2 hasAnchor" number="2.10">
+<h2><span class="header-section-number">2.10</span> 两个例子<a href="#%E4%B8%A4%E4%B8%AA%E4%BE%8B%E5%AD%90" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R上的开区间生成的拓扑 余有限拓扑</p>
+</div>
+<div id="子空间" class="section level2 hasAnchor" number="2.11">
+<h2><span class="header-section-number">2.11</span> 子空间<a href="#%E5%AD%90%E7%A9%BA%E9%97%B4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(设\mathcal{T}是一个集族，Y是一个集合，那么\)</span></p>
+<p><span class="math inline">\(\mathcal{T}|Y = \{A\cap Y|A\in \mathcal{T}\}是集族\mathcal{T}在集合Y上的限制\)</span></p>
+<p><span class="math inline">\(拓扑空间(X,\mathcal{T}),\emptyset \neq Y \subset X,那么\mathcal{T}_Y = \mathcal{T}|Y是Y上的拓扑\)</span></p>
+</div>
+<div id="乘积空间" class="section level2 hasAnchor" number="2.12">
+<h2><span class="header-section-number">2.12</span> 乘积空间<a href="#%E4%B9%98%E7%A7%AF%E7%A9%BA%E9%97%B4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+拓扑空间(X_1,\mathcal{T}_1)(X_1,\mathcal{T_2}),\mathcal{B} = \{U_1\times U_2|U_i\in \mathcal{T}_i\},\\
+那么\overline{ \mathcal{B}} = \{U\subset X_1\times X_2|U是\mathcal{B}中的若干成员\}为X_1\times X_2上由\mathcal{B}生成的乘积拓扑，\\
+(X_1\times X_2,\overline{\mathcal{B}})就是拓扑空间(X_1,\mathcal{T}_1)(X_1,\mathcal{T_2})的乘积空间
+\]</span></p>
+</div>
+<div id="商空间" class="section level2 hasAnchor" number="2.13">
+<h2><span class="header-section-number">2.13</span> 商空间<a href="#%E5%95%86%E7%A9%BA%E9%97%B4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+拓扑空间(X,\mathcal{T}),Y是一个集合，f:X\rightarrow Y是一个满射，\\
+那么Y的子集族\widetilde{\mathcal{T}}=\{U\subset Y|f^{-1}(U)\in \mathcal{T}\}\\
+是Y的拓扑，这个拓扑是Y上的一个商拓扑
+\]</span></p>
+</div>
+<div id="紧性" class="section level2 hasAnchor" number="2.14">
+<h2><span class="header-section-number">2.14</span> 紧性<a href="#%E7%B4%A7%E6%80%A7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="连通性" class="section level2 hasAnchor" number="2.15">
+<h2><span class="header-section-number">2.15</span> 连通性<a href="#%E8%BF%9E%E9%80%9A%E6%80%A7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="hausdaff性质" class="section level2 hasAnchor" number="2.16">
+<h2><span class="header-section-number">2.16</span> hausdaff性质<a href="#hausdaff%E6%80%A7%E8%B4%A8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
-</div>
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
-<div id="ref-xie2015" class="csl-entry">
-Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.
-</div>
-<div id="ref-R-bookdown" class="csl-entry">
-———. 2025. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.
 </div>
 </div>
             </section>

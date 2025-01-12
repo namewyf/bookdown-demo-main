@@ -1,21 +1,117 @@
-# Introduction {#intro}
+---
+---
+---
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+# 拓扑学 {#intro}
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+## 如何判定是否为度量空间？
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
-```
+$X$是一个非空集合，$\rho: X\times X\rightarrow \mathbb{R}$是一个函数.对于任意的$x,y,z\in X$, 满足：
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+$$
+\begin{aligned}
+1. &\text{正定性，} \rho(x,y) \ge 0, \text{当} x = y \text{时}, \rho(x,y) = 0 \\
+2. &\text{对称性，} \rho(x,y) = \rho(y,x) \\
+3. &\text{三角不等式，} \rho(x,y) \le \rho(x,z) + \rho(y,z)
+\end{aligned}
+$$
 
-```{r nice-tab, tidy=FALSE}
-knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
-  booktabs = TRUE
-)
-```
+$\rho是X$上的一个度量，**或者距离**，这里用距离就很好理解了。$(X,\rho)或X$为一个度量空间
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+## 欧式度量
+
+如果我们把以上的度量空间从2维度推广到n维，那么就可以得到欧式空间
+
+$$
+\rho(x,y) = (\sum_{k=1}^{n}(x_k-y_k)^{\frac{1}{2}})
+$$
+
+## 球形邻域
+
+## 开集
+
+设$(X,\rho)$是一个度量空间，$A\subset X$.$\forall x\in A$，那么都存在一个$x的球形邻域B(x,\epsilon)$，使得： $$x\in B(x,\epsilon)\subset A$$ 成立，那么$A$就是$(X,\rho)$的开集
+
+任意球形邻域都是开集
+
+度量空间里的一个集合是开集$\Leftrightarrow$这个集合可以表示为若干球形邻域的并
+
+## 开集的基本性质
+
+设$\mathcal{T}$是$(X,\rho)$中所有的开集构成的集合，$\mathcal{T}$满足如下性质：
+
+1.  $\emptyset,X\in \mathcal{T}$
+
+2.  有限多个$\mathcal{T}$的交依然是$\mathcal{T}$的成员
+
+3.  任意多个$\mathcal{T}$的并依然是$\mathcal{T}$的成员
+
+## 拓扑
+
+$设X是一个非空集合，如果\mathcal{T}\subset 2^X$满足：
+
+$$1. \emptyset,X\in \mathcal{T}\\
+2.  有限多个\mathcal{T}交依然是\mathcal{T}的成员\\
+3.  任意多个\mathcal{T}的并依然是\mathcal{T}的成员\\
+那么\mathcal{T}是X上的拓扑，(X,\mathcal{T})是一个拓扑空间，\mathcal{T}中的成员都是(X,\mathcal{T})的开集
+$$
+
+平凡拓扑是最小的拓扑只包含$\emptyset$和$X$,离散拓扑是最大的拓扑，$\mathcal{T}=2^X$
+
+## 闭包=稠密
+
+设$(X,\mathcal{T})是拓扑空间，x\in X,A\subset X，如果对于x的任意邻域U,都有$
+
+$U\cap (A-{x})\neq \emptyset$
+
+那么$x是一个聚点，A所有聚点的集合叫做A的导集，记作A'，那么A的闭包\overline{A}=A\cup A'$
+
+## 内部边界
+
+$拓扑空间(X,\mathcal{T}),A\subset X,x\in A,如果A是邻域，那么x是内点，所有内点集合就是内部$
+
+$拓扑空间(X,\mathcal{T}),A\subset X,x\in,如果对于任意x的邻域U，都有$
+
+$U\cap A\neq \emptyset而且U\cap A^C\neq \emptyset$
+
+$那么x就是A的边界点，边界点集合就是A的边界$
+
+## 拓扑基、子基
+
+$拓扑空间(X,\mathcal{T})，\mathcal{B} \subset \mathcal{T},如果空间里每个开集都能表示为\mathcal{B}里面若干成员的并，那么\mathcal{B}是\mathcal{T}的一个基（拓扑基）$
+
+$拓扑空间(X,\mathcal{T})，\mathcal{S}\subset \mathcal{T},如果\mathcal{S}中元的有限交全体构成\mathcal{T}的拓扑基，那么\mathcal{S}是\mathcal{T}的拓扑子基$
+
+## 两个例子
+
+R上的开区间生成的拓扑 余有限拓扑
+
+## 子空间
+
+$设\mathcal{T}是一个集族，Y是一个集合，那么$
+
+$\mathcal{T}|Y = \{A\cap Y|A\in \mathcal{T}\}是集族\mathcal{T}在集合Y上的限制$
+
+$拓扑空间(X,\mathcal{T}),\emptyset \neq Y \subset X,那么\mathcal{T}_Y = \mathcal{T}|Y是Y上的拓扑$
+
+## 乘积空间
+
+$$
+拓扑空间(X_1,\mathcal{T}_1)(X_1,\mathcal{T_2}),\mathcal{B} = \{U_1\times U_2|U_i\in \mathcal{T}_i\},\\
+那么\overline{ \mathcal{B}} = \{U\subset X_1\times X_2|U是\mathcal{B}中的若干成员\}为X_1\times X_2上由\mathcal{B}生成的乘积拓扑，\\
+(X_1\times X_2,\overline{\mathcal{B}})就是拓扑空间(X_1,\mathcal{T}_1)(X_1,\mathcal{T_2})的乘积空间
+$$
+
+## 商空间
+
+$$
+拓扑空间(X,\mathcal{T}),Y是一个集合，f:X\rightarrow Y是一个满射，\\
+那么Y的子集族\widetilde{\mathcal{T}}=\{U\subset Y|f^{-1}(U)\in \mathcal{T}\}\\
+是Y的拓扑，这个拓扑是Y上的一个商拓扑
+$$
+
+## 紧性
+
+## 连通性
+
+## hausdaff性质

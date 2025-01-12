@@ -1,0 +1,315 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{book}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={A Minimal Book Example},
+  pdfauthor={Yihui Xie},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{A Minimal Book Example}
+\author{Yihui Xie}
+\date{2025-01-12}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter{Prerequisites}\label{prerequisites}
+
+This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports, e.g., a math equation \(a^2 + b^2 = c^2\).
+
+The \textbf{bookdown} package can be installed from CRAN or Github:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
+\CommentTok{\# or the development version}
+\CommentTok{\# devtools::install\_github("rstudio/bookdown")}
+\end{Highlighting}
+\end{Shaded}
+
+Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading \texttt{\#}.
+
+To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\chapter{拓扑学}\label{intro}
+
+\section{如何判定是否为度量空间？}\label{ux5982ux4f55ux5224ux5b9aux662fux5426ux4e3aux5ea6ux91cfux7a7aux95f4}
+
+\(X\)是一个非空集合，\(\rho: X\times X\rightarrow \mathbb{R}\)是一个函数.对于任意的\(x,y,z\in X\), 满足：
+
+\[
+\begin{aligned}
+1. &\text{正定性，} \rho(x,y) \ge 0, \text{当} x = y \text{时}, \rho(x,y) = 0 \\
+2. &\text{对称性，} \rho(x,y) = \rho(y,x) \\
+3. &\text{三角不等式，} \rho(x,y) \le \rho(x,z) + \rho(y,z)
+\end{aligned}
+\]
+
+\(\rho是X\)上的一个度量，\textbf{或者距离}，这里用距离就很好理解了。\((X,\rho)或X\)为一个度量空间
+
+\section{欧式度量}\label{ux6b27ux5f0fux5ea6ux91cf}
+
+如果我们把以上的度量空间从2维度推广到n维，那么就可以得到欧式空间
+
+\[
+\rho(x,y) = (\sum_{k=1}^{n}(x_k-y_k)^{\frac{1}{2}})
+\]
+
+\section{球形邻域}\label{ux7403ux5f62ux90bbux57df}
+
+\section{开集}\label{ux5f00ux96c6}
+
+设\((X,\rho)\)是一个度量空间，\(A\subset X\).\(\forall x\in A\)，那么都存在一个\(x的球形邻域B(x,\epsilon)\)，使得： \[x\in B(x,\epsilon)\subset A\] 成立，那么\(A\)就是\((X,\rho)\)的开集
+
+任意球形邻域都是开集
+
+度量空间里的一个集合是开集\(\Leftrightarrow\)这个集合可以表示为若干球形邻域的并
+
+\section{开集的基本性质}\label{ux5f00ux96c6ux7684ux57faux672cux6027ux8d28}
+
+设\(\mathcal{T}\)是\((X,\rho)\)中所有的开集构成的集合，\(\mathcal{T}\)满足如下性质：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(\emptyset,X\in \mathcal{T}\)
+\item
+  有限多个\(\mathcal{T}\)的交依然是\(\mathcal{T}\)的成员
+\item
+  任意多个\(\mathcal{T}\)的并依然是\(\mathcal{T}\)的成员
+\end{enumerate}
+
+\section{拓扑}\label{ux62d3ux6251}
+
+\(设X是一个非空集合，如果\mathcal{T}\subset 2^X\)满足：
+
+\[1. \emptyset,X\in \mathcal{T}\\
+2.  有限多个\mathcal{T}交依然是\mathcal{T}的成员\\
+3.  任意多个\mathcal{T}的并依然是\mathcal{T}的成员\\
+那么\mathcal{T}是X上的拓扑，(X,\mathcal{T})是一个拓扑空间，\mathcal{T}中的成员都是(X,\mathcal{T})的开集
+\]
+
+平凡拓扑是最小的拓扑只包含\(\emptyset\)和\(X\),离散拓扑是最大的拓扑，\(\mathcal{T}=2^X\)
+
+\section{闭包=稠密}\label{ux95edux5305ux7a20ux5bc6}
+
+设\((X,\mathcal{T})是拓扑空间，x\in X,A\subset X，如果对于x的任意邻域U,都有\)
+
+\(U\cap (A-{x})\neq \emptyset\)
+
+那么\(x是一个聚点，A所有聚点的集合叫做A的导集，记作A'，那么A的闭包\overline{A}=A\cup A'\)
+
+\section{内部边界}\label{ux5185ux90e8ux8fb9ux754c}
+
+\(拓扑空间(X,\mathcal{T}),A\subset X,x\in A,如果A是邻域，那么x是内点，所有内点集合就是内部\)
+
+\(拓扑空间(X,\mathcal{T}),A\subset X,x\in,如果对于任意x的邻域U，都有\)
+
+\(U\cap A\neq \emptyset而且U\cap A^C\neq \emptyset\)
+
+\(那么x就是A的边界点，边界点集合就是A的边界\)
+
+\section{拓扑基、子基}\label{ux62d3ux6251ux57faux5b50ux57fa}
+
+\(拓扑空间(X,\mathcal{T})，\mathcal{B} \subset \mathcal{T},如果空间里每个开集都能表示为\mathcal{B}里面若干成员的并，那么\mathcal{B}是\mathcal{T}的一个基（拓扑基）\)
+
+\(拓扑空间(X,\mathcal{T})，\mathcal{S}\subset \mathcal{T},如果\mathcal{S}中元的有限交全体构成\mathcal{T}的拓扑基，那么\mathcal{S}是\mathcal{T}的拓扑子基\)
+
+\section{两个例子}\label{ux4e24ux4e2aux4f8bux5b50}
+
+R上的开区间生成的拓扑 余有限拓扑
+
+\section{子空间}\label{ux5b50ux7a7aux95f4}
+
+\(设\mathcal{T}是一个集族，Y是一个集合，那么\)
+
+\(\mathcal{T}|Y = \{A\cap Y|A\in \mathcal{T}\}是集族\mathcal{T}在集合Y上的限制\)
+
+\(拓扑空间(X,\mathcal{T}),\emptyset \neq Y \subset X,那么\mathcal{T}_Y = \mathcal{T}|Y是Y上的拓扑\)
+
+\section{乘积空间}\label{ux4e58ux79efux7a7aux95f4}
+
+\[
+拓扑空间(X_1,\mathcal{T}_1)(X_1,\mathcal{T_2}),\mathcal{B} = \{U_1\times U_2|U_i\in \mathcal{T}_i\},\\
+那么\overline{ \mathcal{B}} = \{U\subset X_1\times X_2|U是\mathcal{B}中的若干成员\}为X_1\times X_2上由\mathcal{B}生成的乘积拓扑，\\
+(X_1\times X_2,\overline{\mathcal{B}})就是拓扑空间(X_1,\mathcal{T}_1)(X_1,\mathcal{T_2})的乘积空间
+\]
+
+\section{商空间}\label{ux5546ux7a7aux95f4}
+
+\[
+拓扑空间(X,\mathcal{T}),Y是一个集合，f:X\rightarrow Y是一个满射，\\
+那么Y的子集族\widetilde{\mathcal{T}}=\{U\subset Y|f^{-1}(U)\in \mathcal{T}\}\\
+是Y的拓扑，这个拓扑是Y上的一个商拓扑
+\]
+
+\section{紧性}\label{ux7d27ux6027}
+
+\section{连通性}\label{ux8fdeux901aux6027}
+
+\section{hausdaff性质}\label{hausdaffux6027ux8d28}
+
+\chapter{Literature}\label{literature}
+
+Here is a review of existing methods.
+
+\chapter{Methods}\label{methods}
+
+We describe our methods in this chapter.
+
+Math can be added in body using usual syntax like this
+
+\section{math example}\label{math-example}
+
+\(p\) is unknown but expected to be around 1/3. Standard error will be approximated
+
+\[
+SE = \sqrt{\frac{p(1-p)}{n}} \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027
+\]
+
+You can also use math in footnotes like this\footnote{where we mention \(p = \frac{a}{b}\)}.
+
+We will approximate standard error to 0.027\footnote{\(p\) is unknown but expected to be around 1/3. Standard error will be approximated
+
+  \[
+  SE = \sqrt{\frac{p(1-p)}{n}} \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027
+  \]}
+
+\chapter{Applications}\label{applications}
+
+Some \emph{significant} applications are demonstrated in this chapter.
+
+\section{Example one}\label{example-one}
+
+\section{Example two}\label{example-two}
+
+\chapter{Final Words}\label{final-words}
+
+We have finished a nice book.
+
+\bibliography{book.bib,packages.bib}
+
+\end{document}
